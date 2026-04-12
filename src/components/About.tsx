@@ -63,7 +63,7 @@ export default function About() {
               alt="Leonardo Cecchi portrait"
               fill
               quality={90}
-              style={{ objectFit: "cover", objectPosition: "center top" }}
+              style={{ objectFit: "cover", objectPosition: "center top", transform: "scale(0.78)", transformOrigin: "center top" }}
               sizes="(max-width: 768px) 60vw, 280px"
             />
           </div>
