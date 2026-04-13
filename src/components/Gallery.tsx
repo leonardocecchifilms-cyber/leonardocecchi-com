@@ -8,7 +8,7 @@ const images = [
   { src: "/images/gallery/gallery-02.jpg", alt: "Leonardo Cecchi" },
   { src: "/images/gallery/gallery-03.jpg", alt: "Leonardo Cecchi" },
   { src: "/images/gallery/gallery-04.jpg", alt: "Leonardo Cecchi" },
-  { src: "/images/gallery/gallery-05.jpg", alt: "Leonardo Cecchi" },
+  { src: "/images/gallery/gallery-05.jpg", alt: "Leonardo Cecchi", position: "50% 20%" },
   { src: "/images/gallery/gallery-06.jpg", alt: "Leonardo Cecchi" },
   { src: "/images/gallery/gallery-07.png", alt: "Leonardo Cecchi" },
   { src: "/images/gallery/gallery-08.png", alt: "Leonardo Cecchi" },
@@ -18,7 +18,7 @@ const images = [
   { src: "/images/gallery/gallery-12.jpg", alt: "Leonardo Cecchi" },
 ];
 
-function GalleryItem({ src, alt, index }: { src: string; alt: string; index: number }) {
+function GalleryItem({ src, alt, index, position = "center top" }: { src: string; alt: string; index: number; position?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -64,7 +64,7 @@ function GalleryItem({ src, alt, index }: { src: string; alt: string; index: num
         quality={85}
         style={{
           objectFit: "cover",
-          objectPosition: "center top",
+          objectPosition: position,
           transition: "transform 0.7s ease",
         }}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -168,7 +168,7 @@ export default function Gallery() {
         className="gallery-grid"
       >
         {images.map((img, i) => (
-          <GalleryItem key={img.src} src={img.src} alt={img.alt} index={i} />
+          <GalleryItem key={img.src} src={img.src} alt={img.alt} index={i} position={(img as any).position} />
         ))}
       </div>
 
