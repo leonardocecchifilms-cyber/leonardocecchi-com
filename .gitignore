@@ -47,3 +47,14 @@ next-env.d.ts
 /resume.pdf
 /CLAUDE.md
 /AGENTS.md
+
+# Large source asset folders — not for git
+/CALL IT ALL LOVE SITE/
+/DEMO reel/
+/Gallery/
+/headshots site/
+/STILLS FOR IG SECTION/
+
+# Large files in public/ — hosted externally
+/public/videos/cial-teaser.mov
+/public/call-it-all-love-show-bible.pdf

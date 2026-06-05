@@ -1,4 +1,10 @@
 {
   "framework": "nextjs",
-  "outputDirectory": "out"
+  "redirects": [
+    {
+      "source": "/self-produced-work/call-it-all-love",
+      "destination": "/original-work/call-it-all-love",
+      "permanent": true
+    }
+  ]
 }

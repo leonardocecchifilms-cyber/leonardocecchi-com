@@ -2,13 +2,17 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useLang } from "@/contexts/LanguageContext";
+import { t } from "@/translations";
 
 export default function Hero() {
   const [visible, setVisible] = useState(false);
+  const { lang } = useLang();
+  const tr = t[lang].hero;
 
   useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 200);
-    return () => clearTimeout(t);
+    const timer = setTimeout(() => setVisible(true), 200);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -33,7 +37,7 @@ export default function Hero() {
         sizes="100vw"
       />
 
-      {/* Subtle gradient — heavier at bottom for text legibility */}
+      {/* Gradient */}
       <div
         style={{
           position: "absolute",
@@ -44,7 +48,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Bottom-left text — Beatrice Vendramin style */}
+      {/* Bottom-left text */}
       <div
         style={{
           position: "absolute",
@@ -80,11 +84,11 @@ export default function Hero() {
             margin: 0,
           }}
         >
-          Actor&nbsp;&nbsp;·&nbsp;&nbsp;Filmmaker&nbsp;&nbsp;·&nbsp;&nbsp;Model
+          {tr.subtitle}
         </p>
       </div>
 
-      {/* Scroll indicator — bottom right */}
+      {/* Scroll indicator */}
       <div
         style={{
           position: "absolute",
@@ -108,7 +112,7 @@ export default function Hero() {
             color: "#b0a497",
           }}
         >
-          Scroll
+          {tr.scroll}
         </span>
         <div
           style={{

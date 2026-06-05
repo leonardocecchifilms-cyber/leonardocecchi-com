@@ -1,21 +1,32 @@
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import Studios from "@/components/Studios";
 import About from "@/components/About";
+import Showreel from "@/components/Showreel";
+import Reels from "@/components/Reels";
+import PressAwards from "@/components/PressAwards";
 import Gallery from "@/components/Gallery";
 import Resume from "@/components/Resume";
-import Instagram from "@/components/Instagram";
+import InstagramGrid from "@/components/InstagramGrid";
 import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main style={{ background: "#0a0a0a" }}>
-      <Navigation />
-      <Hero />
-      <About />
-      <Gallery />
-      <Resume />
-      <Instagram />
-      <Contact />
-    </main>
+    <LanguageProvider>
+      <main style={{ background: "#0a0a0a" }}>
+        <Navigation />
+        <Hero />
+        <Studios />
+        <About />
+        <Showreel />
+        <Gallery />
+        <Reels />
+        <InstagramGrid />
+        <Resume />
+        <PressAwards />
+        <Contact />
+      </main>
+    </LanguageProvider>
   );
 }

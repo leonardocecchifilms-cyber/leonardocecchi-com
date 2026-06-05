@@ -1,19 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Resume", href: "#resume" },
-  { label: "Instagram", href: "#instagram" },
-  { label: "Contact", href: "#contact" },
-];
+import { useLang } from "@/contexts/LanguageContext";
+import { t } from "@/translations";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, setLang } = useLang();
+  const tr = t[lang].nav;
+
+  const navLinks = [
+    { label: tr.about,        href: "/#about" },
+    { label: tr.showreel,     href: "/#showreel" },
+    { label: tr.reels,        href: "/#reels" },
+    { label: tr.gallery,      href: "/#gallery" },
+    { label: tr.resume,       href: "/#resume" },
+    { label: tr.inquiries,    href: "/#inquiries" },
+    { label: tr.contact,      href: "/#contact" },
+    { label: tr.selfProduced, href: "/original-work/call-it-all-love" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -50,7 +57,7 @@ export default function Navigation() {
       >
         {/* Logo */}
         <Link
-          href="#hero"
+          href="/#hero"
           style={{
             fontFamily: "var(--font-cormorant)",
             fontSize: "1.1rem",
@@ -65,42 +72,60 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop nav */}
-        <ul
-          style={{
-            display: "flex",
-            gap: "2.5rem",
-            listStyle: "none",
-            margin: 0,
-            padding: 0,
-          }}
-          className="hidden-mobile"
-        >
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                style={{
-                  fontFamily: "var(--font-inter)",
-                  fontSize: "0.7rem",
-                  fontWeight: 400,
-                  letterSpacing: "0.22em",
-                  textTransform: "uppercase",
-                  color: "#b0a497",
-                  textDecoration: "none",
-                  transition: "color 0.2s ease",
-                }}
-                onMouseEnter={(e) =>
-                  ((e.target as HTMLElement).style.color = "#f0ebe3")
-                }
-                onMouseLeave={(e) =>
-                  ((e.target as HTMLElement).style.color = "#b0a497")
-                }
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div style={{ display: "flex", alignItems: "center", gap: "2.5rem" }} className="hidden-mobile">
+          <ul style={{ display: "flex", gap: "2.5rem", listStyle: "none", margin: 0, padding: 0 }}>
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  style={{
+                    fontFamily: "var(--font-inter)",
+                    fontSize: "0.7rem",
+                    fontWeight: 400,
+                    letterSpacing: "0.22em",
+                    textTransform: "uppercase",
+                    color: "#b0a497",
+                    textDecoration: "none",
+                    transition: "color 0.2s ease",
+                  }}
+                  onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#f0ebe3")}
+                  onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#b0a497")}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Language toggle */}
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", borderLeft: "1px solid #2e2924", paddingLeft: "2rem" }}>
+            {(["en", "it"] as const).map((l, i) => (
+              <React.Fragment key={l}>
+                {i > 0 && <span style={{ color: "#2e2924", fontSize: "0.55rem" }}>·</span>}
+                <button
+                  onClick={() => setLang(l)}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                    fontFamily: "var(--font-inter)",
+                    fontSize: "0.62rem",
+                    fontWeight: 400,
+                    letterSpacing: "0.2em",
+                    textTransform: "uppercase",
+                    color: lang === l ? "#f0ebe3" : "#4a3e30",
+                    padding: 0,
+                    transition: "color 0.2s ease",
+                  }}
+                  onMouseEnter={(e) => { if (lang !== l) (e.currentTarget as HTMLElement).style.color = "#b0a497"; }}
+                  onMouseLeave={(e) => { if (lang !== l) (e.currentTarget as HTMLElement).style.color = "#4a3e30"; }}
+                >
+                  {l.toUpperCase()}
+                </button>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
 
         {/* Mobile hamburger */}
         <button
@@ -117,36 +142,9 @@ export default function Navigation() {
           }}
           aria-label="Toggle menu"
         >
-          <span
-            style={{
-              display: "block",
-              width: "24px",
-              height: "1px",
-              background: "#f0ebe3",
-              transition: "transform 0.3s ease, opacity 0.3s ease",
-              transform: menuOpen ? "translateY(6px) rotate(45deg)" : "none",
-            }}
-          />
-          <span
-            style={{
-              display: "block",
-              width: "24px",
-              height: "1px",
-              background: "#f0ebe3",
-              transition: "opacity 0.3s ease",
-              opacity: menuOpen ? 0 : 1,
-            }}
-          />
-          <span
-            style={{
-              display: "block",
-              width: "24px",
-              height: "1px",
-              background: "#f0ebe3",
-              transition: "transform 0.3s ease, opacity 0.3s ease",
-              transform: menuOpen ? "translateY(-6px) rotate(-45deg)" : "none",
-            }}
-          />
+          <span style={{ display: "block", width: "24px", height: "1px", background: "#f0ebe3", transition: "transform 0.3s ease, opacity 0.3s ease", transform: menuOpen ? "translateY(6px) rotate(45deg)" : "none" }} />
+          <span style={{ display: "block", width: "24px", height: "1px", background: "#f0ebe3", transition: "opacity 0.3s ease", opacity: menuOpen ? 0 : 1 }} />
+          <span style={{ display: "block", width: "24px", height: "1px", background: "#f0ebe3", transition: "transform 0.3s ease, opacity 0.3s ease", transform: menuOpen ? "translateY(-6px) rotate(-45deg)" : "none" }} />
         </button>
       </nav>
 
@@ -182,6 +180,32 @@ export default function Navigation() {
               </li>
             ))}
           </ul>
+
+          {/* Mobile language toggle */}
+          <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px solid #2e2924" }}>
+            {(["en", "it"] as const).map((l, i) => (
+              <React.Fragment key={l}>
+                {i > 0 && <span style={{ color: "#2e2924", fontSize: "0.55rem" }}>·</span>}
+                <button
+                  onClick={() => { setLang(l); setMenuOpen(false); }}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                    fontFamily: "var(--font-inter)",
+                    fontSize: "0.65rem",
+                    fontWeight: 400,
+                    letterSpacing: "0.2em",
+                    textTransform: "uppercase",
+                    color: lang === l ? "#f0ebe3" : "#4a3e30",
+                    padding: 0,
+                  }}
+                >
+                  {l.toUpperCase()}
+                </button>
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       )}
 

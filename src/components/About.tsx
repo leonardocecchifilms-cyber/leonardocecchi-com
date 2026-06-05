@@ -2,16 +2,14 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-
-const bio = [
-  "Leonardo Cecchi is an Italian-American actor working across film, television, and theater, known for bringing emotional depth and nuance to complex, character-driven roles. From leading Disney's Alex & Co. to portraying a resentful teenager in HBO Max's A Christmas Mystery, and the visionary engineer Gian Paolo Dallara in Lamborghini: The Man Behind the Legend, he continues to build a diverse and compelling body of work.",
-  "Born in Minneapolis to an Italian father and an American mother, Leonardo was raised between cultures and discovered his passion for performance at a young age. He trained in stage acting, diction, jazz dance, and musical theater at a performing arts high school in Turin, where he was discovered by a Disney casting director — launching him into four seasons of Alex & Co., two Disney Channel films, and a successful publishing run with two books.",
-  "After relocating to Los Angeles in 2017, Leonardo continued to refine his craft, training at The Chubbuck Acting Studio and the Sanford Meisner Center. He also wrote, directed, and starred in the award-winning short film Louie's Emotions, earning Best Actor at the LA Top Shorts Film Festival. He is the founder of Still Moving Pictures, through which he develops and produces original film projects.",
-];
+import { useLang } from "@/contexts/LanguageContext";
+import { t } from "@/translations";
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const { lang } = useLang();
+  const tr = t[lang].about;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -79,13 +77,16 @@ export default function About() {
                 marginBottom: "0.75rem",
               }}
             >
-              Represented by
+              {tr.representedBy}
             </p>
             <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.75rem", color: "#b0a497", margin: "0 0 0.2rem" }}>
               The Savage Agency
             </p>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.75rem", color: "#b0a497", margin: 0 }}>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.75rem", color: "#b0a497", margin: "0 0 0.2rem" }}>
               Rain Management
+            </p>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.75rem", color: "#b0a497", margin: 0 }}>
+              Do Cinema
             </p>
           </div>
         </div>
@@ -102,7 +103,7 @@ export default function About() {
               marginBottom: "1.5rem",
             }}
           >
-            About
+            {tr.label}
           </p>
           <h2
             style={{
@@ -115,11 +116,11 @@ export default function About() {
               lineHeight: 1.1,
             }}
           >
-            Film &amp; Stage Actor
+            {tr.heading}
           </h2>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-            {bio.map((para, i) => (
+            {tr.bio.map((para, i) => (
               <p
                 key={i}
                 style={{
@@ -136,7 +137,7 @@ export default function About() {
             ))}
           </div>
 
-          {/* Divider + Stats */}
+          {/* Stats */}
           <div
             style={{
               marginTop: "2.5rem",
@@ -147,11 +148,7 @@ export default function About() {
               gap: "1.5rem",
             }}
           >
-            {[
-              { num: "7", label: "Feature Films" },
-              { num: "4", label: "TV Credits" },
-              { num: "3", label: "Stage Roles" },
-            ].map(({ num, label }) => (
+            {tr.stats.map(({ num, label, subtitle }) => (
               <div key={label}>
                 <p
                   style={{
@@ -172,10 +169,23 @@ export default function About() {
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
                     color: "#7a6f64",
-                    margin: 0,
+                    margin: "0 0 0.3rem",
                   }}
                 >
                   {label}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "var(--font-cormorant)",
+                    fontStyle: "italic",
+                    fontSize: "0.78rem",
+                    fontWeight: 300,
+                    color: "#4a3e30",
+                    margin: 0,
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {subtitle}
                 </p>
               </div>
             ))}
@@ -185,9 +195,7 @@ export default function About() {
 
       <style>{`
         @media (max-width: 768px) {
-          .about-grid {
-            grid-template-columns: 1fr !important;
-          }
+          .about-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </section>

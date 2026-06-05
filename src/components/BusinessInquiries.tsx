@@ -4,11 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { useLang } from "@/contexts/LanguageContext";
 import { t } from "@/translations";
 
-export default function Instagram() {
+export default function BusinessInquiries() {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const { lang } = useLang();
-  const tr = t[lang].instagram;
+  const tr = t[lang].inquiries;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,9 +21,10 @@ export default function Instagram() {
 
   return (
     <section
-      id="instagram"
+      id="inquiries"
       style={{
         background: "#0a0a0a",
+        borderTop: "1px solid #2e2924",
         padding: "clamp(5rem, 10vw, 9rem) clamp(1.5rem, 6vw, 5rem)",
         textAlign: "center",
       }}
@@ -38,25 +39,6 @@ export default function Instagram() {
           transform: visible ? "translateY(0)" : "translateY(30px)",
         }}
       >
-        {/* Instagram icon */}
-        <div style={{ marginBottom: "1.5rem" }}>
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#c9a96e"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            style={{ margin: "0 auto" }}
-          >
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-            <circle cx="12" cy="12" r="4" />
-            <circle cx="17.5" cy="6.5" r="0.5" fill="#c9a96e" stroke="none" />
-          </svg>
-        </div>
-
         <p
           style={{
             fontFamily: "var(--font-inter)",
@@ -65,6 +47,7 @@ export default function Instagram() {
             textTransform: "uppercase",
             color: "#c9a96e",
             marginBottom: "1rem",
+            margin: "0 0 1rem",
           }}
         >
           {tr.label}
@@ -94,15 +77,11 @@ export default function Instagram() {
             margin: "0 0 2.5rem",
           }}
         >
-          {tr.text[0]}
-          <br />
-          {tr.text[1]}
+          {tr.body}
         </p>
 
         <a
-          href="https://www.instagram.com/leonardodcecchi/"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:LeonardoCecchifilms@gmail.com"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -127,29 +106,21 @@ export default function Instagram() {
             (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
           }}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-            <circle cx="12" cy="12" r="4" />
-            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
-          </svg>
-          @leonardodcecchi
-        </a>
-
-        {/* Decorative line */}
-        <div style={{ marginTop: "4rem", display: "flex", alignItems: "center", gap: "1rem" }}>
-          <div style={{ flex: 1, height: "1px", background: "#2e2924" }} />
-          <span
-            style={{
-              fontFamily: "var(--font-cormorant)",
-              fontStyle: "italic",
-              fontSize: "0.9rem",
-              color: "#3a3228",
-            }}
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            leonardocecchi.com
-          </span>
-          <div style={{ flex: 1, height: "1px", background: "#2e2924" }} />
-        </div>
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          {tr.buttonLabel}
+        </a>
       </div>
     </section>
   );

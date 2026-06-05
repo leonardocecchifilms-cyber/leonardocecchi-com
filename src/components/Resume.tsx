@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLang } from "@/contexts/LanguageContext";
+import { t } from "@/translations";
 
 type Credit = { title: string; role: string; studio: string };
 
 const featureFilm: Credit[] = [
   { title: "A Christmas Mystery", role: "Harrison", studio: "Warner Bros. / HBO Max" },
   { title: "Prom Dates", role: "Giancarlo", studio: "American High / Hulu" },
-  { title: "Lamborghini: The Legend", role: "Gianpaolo Dallara", studio: "Lionsgate / Bobby Moresco" },
+  { title: "Lamborghini: The Man Behind the Legend", role: "Gian Paolo Dallara", studio: "Lionsgate / Bobby Moresco" },
   { title: "How to Grow Up", role: "Alex Leoni", studio: "Disney It. / Disney+" },
   { title: "Tini – The Movie", role: "Saul", studio: "Disney / Disney+" },
   { title: "The Wrong Stepmother", role: "Tyler", studio: "Cooper Productions / Hulu" },
@@ -27,15 +29,7 @@ const theater: Credit[] = [
   { title: "Footloose", role: "Chuck", studio: "BarryPearl / Panico Prod." },
 ];
 
-function CreditSection({
-  title,
-  credits,
-  delay = 0,
-}: {
-  title: string;
-  credits: Credit[];
-  delay?: number;
-}) {
+function CreditSection({ title, credits, delay = 0 }: { title: string; credits: Credit[]; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -76,11 +70,8 @@ function CreditSection({
 
       <table style={{ width: "100%", borderCollapse: "collapse" }}>
         <tbody>
-          {credits.map((credit, i) => (
-            <tr
-              key={credit.title}
-              style={{ borderBottom: "1px solid #1c1916" }}
-            >
+          {credits.map((credit) => (
+            <tr key={credit.title} style={{ borderBottom: "1px solid #1c1916" }}>
               <td
                 style={{
                   fontFamily: "var(--font-cormorant)",
@@ -132,6 +123,8 @@ function CreditSection({
 export default function Resume() {
   const headerRef = useRef<HTMLDivElement>(null);
   const [headerVisible, setHeaderVisible] = useState(false);
+  const { lang } = useLang();
+  const tr = t[lang].resume;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -177,7 +170,7 @@ export default function Resume() {
                 marginBottom: "0.5rem",
               }}
             >
-              Credits
+              {tr.label}
             </p>
             <h2
               style={{
@@ -189,13 +182,13 @@ export default function Resume() {
                 margin: 0,
               }}
             >
-              Resume
+              {tr.heading}
             </h2>
           </div>
 
           <a
-            href="/resume.pdf"
-            download="Leonardo_Cecchi_Resume.pdf"
+            href={tr.resumeUrl}
+            download={tr.resumeFilename}
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -225,14 +218,14 @@ export default function Resume() {
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
             </svg>
-            Download PDF
+            {tr.download}
           </a>
         </div>
 
         {/* Credits */}
-        <CreditSection title="Feature Film" credits={featureFilm} delay={0.1} />
-        <CreditSection title="Television" credits={television} delay={0.2} />
-        <CreditSection title="Theater" credits={theater} delay={0.3} />
+        <CreditSection title={tr.filmSection} credits={featureFilm} delay={0.1} />
+        <CreditSection title={tr.tvSection} credits={television} delay={0.2} />
+        <CreditSection title={tr.theaterSection} credits={theater} delay={0.3} />
 
         {/* Bottom info */}
         <div
@@ -246,93 +239,45 @@ export default function Resume() {
           }}
         >
           <div>
-            <h4
-              style={{
-                fontFamily: "var(--font-inter)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.3em",
-                textTransform: "uppercase",
-                color: "#c9a96e",
-                margin: "0 0 0.75rem",
-              }}
-            >
-              Languages
+            <h4 style={{ fontFamily: "var(--font-inter)", fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "#c9a96e", margin: "0 0 0.75rem" }}>
+              {tr.languages}
             </h4>
-            <p
-              style={{
-                fontFamily: "var(--font-inter)",
-                fontWeight: 300,
-                fontSize: "0.82rem",
-                color: "#9a8f82",
-                lineHeight: 1.7,
-                margin: 0,
-              }}
-            >
-              American (Standard, Southern &amp; Italian accent)
-              <br />
-              Italian (fluent)
-              <br />
-              Spanish (intermediate)
+            <p style={{ fontFamily: "var(--font-inter)", fontWeight: 300, fontSize: "0.82rem", color: "#9a8f82", lineHeight: 1.7, margin: 0 }}>
+              {tr.languagesText.map((line, i) => (
+                <span key={i}>{line}{i < tr.languagesText.length - 1 && <br />}</span>
+              ))}
+            </p>
+          </div>
+          {lang === "it" && (
+            <div>
+              <h4 style={{ fontFamily: "var(--font-inter)", fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "#c9a96e", margin: "0 0 0.75rem" }}>
+                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                {(tr as any).dialetti}
+              </h4>
+              <p style={{ fontFamily: "var(--font-inter)", fontWeight: 300, fontSize: "0.82rem", color: "#9a8f82", lineHeight: 1.7, margin: 0 }}>
+                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                {(tr as any).dialettiText.map((line: string, i: number, arr: string[]) => (
+                  <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+                ))}
+              </p>
+            </div>
+          )}
+          <div>
+            <h4 style={{ fontFamily: "var(--font-inter)", fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "#c9a96e", margin: "0 0 0.75rem" }}>
+              {tr.training}
+            </h4>
+            <p style={{ fontFamily: "var(--font-inter)", fontWeight: 300, fontSize: "0.82rem", color: "#9a8f82", lineHeight: 1.7, margin: 0 }}>
+              {tr.trainingText.map((line, i) => (
+                <span key={i}>{line}{i < tr.trainingText.length - 1 && <br />}</span>
+              ))}
             </p>
           </div>
           <div>
-            <h4
-              style={{
-                fontFamily: "var(--font-inter)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.3em",
-                textTransform: "uppercase",
-                color: "#c9a96e",
-                margin: "0 0 0.75rem",
-              }}
-            >
-              Training
+            <h4 style={{ fontFamily: "var(--font-inter)", fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "#c9a96e", margin: "0 0 0.75rem" }}>
+              {tr.skills}
             </h4>
-            <p
-              style={{
-                fontFamily: "var(--font-inter)",
-                fontWeight: 300,
-                fontSize: "0.82rem",
-                color: "#9a8f82",
-                lineHeight: 1.7,
-                margin: 0,
-              }}
-            >
-              Sanford Meisner Center (2 years)
-              <br />
-              Ivana Chubbuck Acting Studio (4 years)
-              <br />
-              Cinematic Martial Arts — J.A.M LA (2 years)
-              <br />
-              Boxing (13 months)
-              <br />
-              Comedy Acting — The Young Actor's Workspace
-            </p>
-          </div>
-          <div>
-            <h4
-              style={{
-                fontFamily: "var(--font-inter)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.3em",
-                textTransform: "uppercase",
-                color: "#c9a96e",
-                margin: "0 0 0.75rem",
-              }}
-            >
-              Special Skills
-            </h4>
-            <p
-              style={{
-                fontFamily: "var(--font-inter)",
-                fontWeight: 300,
-                fontSize: "0.82rem",
-                color: "#9a8f82",
-                lineHeight: 1.7,
-                margin: 0,
-              }}
-            >
-              11 variations of a backflip
+            <p style={{ fontFamily: "var(--font-inter)", fontWeight: 300, fontSize: "0.82rem", color: "#9a8f82", lineHeight: 1.7, margin: 0 }}>
+              {tr.skillsText[0]}
             </p>
           </div>
         </div>

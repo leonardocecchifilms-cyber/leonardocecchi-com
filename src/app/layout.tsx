@@ -16,24 +16,46 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Leonardo Cecchi — Actor · Filmmaker · Model",
+  title: "Leonardo Cecchi — Actor | Los Angeles",
   description:
-    "Italian-American actor working across film, television, and theater. Credits include Warner Bros./HBO Max, Disney+, Ryan Murphy/FX, and Lionsgate.",
+    "Leonardo Cecchi is an Italian-American actor based in Los Angeles, known for Disney's Alex & Co., American Horror Stories (FX), Lamborghini: The Man Behind the Legend (Lionsgate), and Prom Dates (Hulu).",
   keywords: [
     "Leonardo Cecchi",
     "actor",
     "filmmaker",
     "Italian American",
-    "Hollywood",
+    "Los Angeles",
     "Disney",
     "HBO Max",
+    "FX",
+    "Hulu",
+    "Lionsgate",
+    "Alex and Co",
+    "American Horror Stories",
+    "Prom Dates",
   ],
   openGraph: {
-    title: "Leonardo Cecchi",
-    description: "Actor · Filmmaker · Model",
+    title: "Leonardo Cecchi — Actor | Los Angeles",
+    description:
+      "Italian-American actor based in Los Angeles. Credits include Disney's Alex & Co., American Horror Stories (FX), Lamborghini: The Man Behind the Legend (Lionsgate), and Prom Dates (Hulu).",
     url: "https://leonardocecchi.com",
     siteName: "Leonardo Cecchi",
     type: "website",
+    images: [
+      {
+        url: "https://leonardocecchi.com/images/og-image.jpg",
+        width: 1200,
+        height: 1800,
+        alt: "Leonardo Cecchi — Actor",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Leonardo Cecchi — Actor | Los Angeles",
+    description:
+      "Italian-American actor based in Los Angeles. Credits include Disney's Alex & Co., American Horror Stories (FX), and Lamborghini: The Man Behind the Legend.",
+    images: ["https://leonardocecchi.com/images/og-image.jpg"],
   },
 };
 
