@@ -17,6 +17,7 @@ const featureFilm: Credit[] = [
 ];
 
 const television: Credit[] = [
+  { title: "9-1-1", role: "Andres (Co-Star)", studio: "20th Television / ABC" },
   { title: "American Horror Stories", role: "Milo", studio: "Ryan Murphy / FX Hulu" },
   { title: "Alex & Co.", role: "Alex Leoni", studio: "Disney It. / Disney+" },
   { title: "Catch 22", role: "Bystander #1", studio: "George Clooney / Paramount" },
