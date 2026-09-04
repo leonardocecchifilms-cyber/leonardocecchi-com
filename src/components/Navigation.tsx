@@ -12,8 +12,8 @@ export default function Navigation() {
   const tr = t[lang].nav;
 
   const navLinks = [
-    { label: tr.about,        href: "/#about" },
     { label: tr.showreel,     href: "/#showreel" },
+    { label: tr.about,        href: "/#about" },
     { label: tr.reels,        href: "/#reels" },
     { label: tr.gallery,      href: "/#gallery" },
     { label: tr.resume,       href: "/#resume" },

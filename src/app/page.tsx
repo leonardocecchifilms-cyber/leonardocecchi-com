@@ -18,8 +18,8 @@ export default function Home() {
         <Navigation />
         <Hero />
         <Studios />
-        <About />
         <Showreel />
+        <About />
         <Gallery />
         <Reels />
         <InstagramGrid />
