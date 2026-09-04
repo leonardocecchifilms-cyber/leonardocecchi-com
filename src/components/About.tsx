@@ -82,9 +82,6 @@ export default function About() {
             <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.75rem", color: "#b0a497", margin: "0 0 0.2rem" }}>
               The Savage Agency
             </p>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.75rem", color: "#b0a497", margin: "0 0 0.2rem" }}>
-              Rain Management
-            </p>
             <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.75rem", color: "#b0a497", margin: 0 }}>
               Do Cinema
             </p>

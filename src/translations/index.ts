@@ -31,7 +31,7 @@ export const t = {
       ],
       stats: [
         { num: "7", label: "Feature Films", subtitle: "incl. Lionsgate & HBO Max" },
-        { num: "4", label: "TV Credits", subtitle: "incl. Ryan Murphy & Disney" },
+        { num: "5", label: "TV Credits", subtitle: "incl. Ryan Murphy & Disney" },
         { num: "3", label: "Stage Roles", subtitle: "incl. Arcimboldi Milan" },
       ],
     },
@@ -222,7 +222,7 @@ export const t = {
       ],
       stats: [
         { num: "7", label: "Lungometraggi", subtitle: "incl. Lionsgate & HBO Max" },
-        { num: "4", label: "Televisione", subtitle: "incl. Ryan Murphy & Disney" },
+        { num: "5", label: "Televisione", subtitle: "incl. Ryan Murphy & Disney" },
         { num: "3", label: "Teatro", subtitle: "incl. Arcimboldi Milan" },
       ],
     },
