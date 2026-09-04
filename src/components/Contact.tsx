@@ -141,35 +141,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Rain Management */}
-          <div
-            style={{ padding: "2.5rem", border: "1px solid #2e2924", background: "#0a0a0a", transition: "border-color 0.3s ease" }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "#4a3e30")}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "#2e2924")}
-          >
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "#c9a96e", margin: "0 0 0.75rem" }}>
-              {tr.managementLabel}
-            </p>
-            <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.4rem", fontWeight: 400, color: "#f0ebe3", margin: "0 0 1.25rem" }}>
-              Rain Management
-            </h3>
-            <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-              <a href="mailto:jbaruch@rainla.com" style={{ fontFamily: "var(--font-inter)", fontSize: "0.8rem", fontWeight: 300, color: "#9a8f82", textDecoration: "none", transition: "color 0.2s ease" }}
-                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#c9a96e")}
-                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#9a8f82")}>
-                jbaruch@rainla.com
-              </a>
-              <a href="mailto:bslobodin@rainla.com" style={{ fontFamily: "var(--font-inter)", fontSize: "0.8rem", fontWeight: 300, color: "#9a8f82", textDecoration: "none", transition: "color 0.2s ease" }}
-                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#c9a96e")}
-                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#9a8f82")}>
-                bslobodin@rainla.com
-              </a>
-              <span style={{ fontFamily: "var(--font-inter)", fontSize: "0.8rem", fontWeight: 300, color: "#7a6f64", marginTop: "0.25rem" }}>
-                +1 914 906 6127
-              </span>
-            </div>
-          </div>
-
           {/* Do Cinema — Italy */}
           <div
             style={{ padding: "2.5rem", border: "1px solid #2e2924", background: "#0a0a0a", transition: "border-color 0.3s ease" }}
@@ -207,6 +178,35 @@ export default function Contact() {
               </span>
             </div>
           </div>
+          {/* Self */}
+          <div
+            style={{ padding: "2.5rem", border: "1px solid #2e2924", background: "#0a0a0a", transition: "border-color 0.3s ease" }}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "#4a3e30")}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "#2e2924")}
+          >
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "#c9a96e", margin: "0 0 0.75rem" }}>
+              {tr.managementLabel}
+            </p>
+            <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.4rem", fontWeight: 400, color: "#f0ebe3", margin: "0 0 1.25rem" }}>
+              Leonardo Cecchi
+            </h3>
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
+              <a href="mailto:leonardocecchifilms@gmail.com" style={{ fontFamily: "var(--font-inter)", fontSize: "0.8rem", fontWeight: 300, color: "#9a8f82", textDecoration: "none", transition: "color 0.2s ease" }}
+                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#c9a96e")}
+                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#9a8f82")}>
+                leonardocecchifilms@gmail.com
+              </a>
+              <a href="mailto:leo@stillmovingpictures.co" style={{ fontFamily: "var(--font-inter)", fontSize: "0.8rem", fontWeight: 300, color: "#9a8f82", textDecoration: "none", transition: "color 0.2s ease" }}
+                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#c9a96e")}
+                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#9a8f82")}>
+                leo@stillmovingpictures.co
+              </a>
+              <span style={{ fontFamily: "var(--font-inter)", fontSize: "0.8rem", fontWeight: 300, color: "#7a6f64", marginTop: "0.25rem" }}>
+                +1 747 217 2313
+              </span>
+            </div>
+          </div>
+
         </div>
 
         {/* ── Business Inquiries / Contact Form ── */}
