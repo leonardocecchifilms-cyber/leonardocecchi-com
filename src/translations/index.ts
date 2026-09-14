@@ -14,7 +14,7 @@ export const t = {
       contact: "Contact",
     },
     hero: {
-      subtitle: "Actor\u00a0\u00a0·\u00a0\u00a0Filmmaker\u00a0\u00a0·\u00a0\u00a0Model",
+      subtitle: "Actor  ·  Filmmaker  ·  Model",
       scroll: "Scroll",
     },
     studios: {
@@ -121,6 +121,32 @@ export const t = {
       italyLabel: "Italy",
       copyright: "All rights reserved.",
     },
+    originalWork: {
+      label: "Original Work",
+      heading: "Original Work",
+      intro: "Writing, producing, and starring in stories I care about — currently in active development and pitching.",
+      backLabel: "All Original Work",
+      cards: [
+        {
+          title: "Escape to Italy",
+          tag: "Feature Film · In Development",
+          blurb: "A romantic comedy about an Italian-American banker who has one week to save his late grandmother's house, and finds the life he's been running from.",
+          cta: "View Project",
+          href: "/original-work/escape-to-italy",
+          image: "/images/escape-to-italy-card.jpg",
+          imagePosition: "center",
+        },
+        {
+          title: "Call It All Love",
+          tag: "Limited Series · In Development",
+          blurb: "A limited drama series based on the George Huguely V case, co-written and produced with director David Mazouz. Official Selection, HollyShorts Film Festival.",
+          cta: "View Project",
+          href: "/original-work/call-it-all-love",
+          image: "/images/cial-poster.png",
+          imagePosition: "10% center",
+        },
+      ],
+    },
     callItAllLove: {
       hero: {
         shortFilmLabel: "Short Film — Proof of Concept",
@@ -182,13 +208,130 @@ export const t = {
       },
       creator: {
         label: "From the Creator",
-        quote: "\u201cI did not make this to explain George Huguely. I made it because I believe the most dangerous stories are the ones we think we already understand. Call It All Love is the story of what a man is made of when everything that made him is stripped away. It is not a comfortable story. It does not end well. But I believe it is a necessary one \u2014 and I believe, if we tell it right, it might change how a young person recognizes the beginning of something dangerous before it reaches its end. That is worth making. That is what this is.\u201d",
-        attribution: "\u2014 Leonardo Cecchi, Writer \u00b7 Creator \u00b7 Producer",
+        quote: "“I did not make this to explain George Huguely. I made it because I believe the most dangerous stories are the ones we think we already understand. Call It All Love is the story of what a man is made of when everything that made him is stripped away. It is not a comfortable story. It does not end well. But I believe it is a necessary one — and I believe, if we tell it right, it might change how a young person recognizes the beginning of something dangerous before it reaches its end. That is worth making. That is what this is.”",
+        attribution: "— Leonardo Cecchi, Writer · Creator · Producer",
       },
       cta: {
         label: "Inquiries",
         body: "Call It All Love is currently in active development and pitching. For producer, distribution, or partnership inquiries:",
         downloadLabel: "Download Show Bible",
+      },
+    },
+    escapeToItaly: {
+      quickFacts: {
+        genreLabel: "Genre",
+        genre: "Romantic Comedy",
+        settingLabel: "Setting",
+        setting: "Los Angeles & Piemonte, Italy",
+        toneLabel: "Tone",
+        tone: "Warm, funny, quietly devastating",
+      },
+      logline: "Mike, an emotionally shut-down Italian-American banker, has one week to save his late grandmother's house, but between a Nonna he keeps alive in his mind rather than say goodbye to, an old friend dragging him into reckless Italian nightlife, and an old flame he's too guarded to let in, the deadline slips past him. He loses the house. What he finds instead is the life, and the heart, he's spent years running from.",
+      story: {
+        label: "Overview",
+        heading: "The Story",
+        body1: "Mike, an Italian-American banker in LA, deflects everything real with charm and jokes, until the same week he's denied a promotion, his girlfriend leaves him (“I hope you learn to feel things before it's too late”), and his stepmother reveals he has one week to save his late grandmother's house from seizure. Mike goes to Italy.",
+        body2: "At the house, he finds Nonna: warm, present, exactly as he remembers her. It isn't real, and Mike knows it, but he can't let her go. He reconnects with Riccardo, a fellow avoider hiding his own grief, and falls back into an easy rhythm with his childhood pen pal Sara, until she pushes him to actually show up for her, not deflect, and he starts to believe he could be different.",
+        closingLine: "“His heart was never too big for this world. He'd just been making himself small enough to fit in it.”",
+      },
+      whyThisStory: {
+        label: "Why This Story",
+        heading: "Why This Story. Why Now.",
+        cards: [
+          {
+            heading: "A Genre Gap Worth Filling",
+            body: "Every Italy rom-com sells the postcard: an outsider healed by the scenery. This one sells the cost of it: what it actually means to have one foot in each world, told by an Italian-American who lived it.",
+          },
+          {
+            heading: "A Real Conversation About Masculinity",
+            body: "Like most men, Mike and Riccardo were never taught what to do with pain; this film watches them find another path to avoidance, and back. Timely, but earned through comedy and heart, not a lecture.",
+          },
+        ],
+      },
+      characters: {
+        label: "The People",
+        heading: "Characters",
+        items: [
+          {
+            name: "Mike (Michele) Giusti",
+            role: "Protagonist",
+            description: "Early 20s. An Italian-American junior bank employee in LA who has built his entire personality around not feeling things. Big-hearted, and about to learn to let it show.",
+          },
+          {
+            name: "Sara Mancuso",
+            role: "The One Who Sees Him",
+            description: "Early 20s. Mike's Italian childhood pen pal, back in Piemonte from Milan to help run her family's bank. Quietly torn between chasing her own dream and staying for a father who's running out of time.",
+          },
+          {
+            name: "Riccardo Costa",
+            role: "Mike's Dark Mirror",
+            description: "Early 20s. Mike's childhood best friend and a magnetic fixture of Turin nightlife, who teaches Mike his “rules” for confidence and not overthinking anything, all while avoiding his own grief exactly the way Mike is.",
+          },
+          {
+            name: "Nonna Giusti",
+            role: "The One Who Never Let Him Hide",
+            description: "Late 60s–70s. Mike's grandmother, who passed away six months before the story begins. Mike interacts with a half-imagined, half-remembered version of her he's built to keep her close: the one person who always told him the truth.",
+          },
+        ],
+      },
+      comparables: {
+        label: "Tone & Positioning",
+        heading: "In the Company Of",
+        items: [
+          {
+            title: "About Time",
+            info: "2013",
+            note: "The comedy grows naturally out of flawed, lovable characters rather than punchlines; the laughs make the emotional moments land harder.",
+          },
+          {
+            title: "Call Me By Your Name",
+            info: "Sony Pictures Classics, 2017",
+            note: "Sun-drenched Italian cinematography and a sense of longing baked into every frame.",
+          },
+          {
+            title: "La Dolce Villa",
+            info: "Netflix, 2024",
+            note: "A reluctant trip to Italy becomes the place someone finally exhales, falls in love, and finds the life they didn't know they were looking for.",
+          },
+        ],
+      },
+      socialTraction: {
+        label: "Marketing Advantage",
+        heading: "A Built-In Audience",
+        body1: "Leonardo brings a social following of 800,000+ across TikTok and Instagram directly to this project, built on years of sharing his own story as an Italian-American navigating both worlds, the exact terrain Escape to Italy dramatizes.",
+        stats: [
+          { num: "4.08M", label: "Combined Following", subtitle: "Leonardo & Eleonora, Instagram + TikTok" },
+          { num: "2.2M", label: "Eleonora's TikTok", subtitle: "Alone, built on Alex & Co. and Out of My League" },
+        ],
+        body2: "Fans already ask for more of that story. A reply to a comment asking for an Alex & Co. reunion is one small example: proof this audience isn't just watching, it's invested in what Leonardo does next.",
+        body3: "That combined reach puts real marketing weight behind Escape to Italy before a single frame is shot.",
+        videoCaption: "Replying to a fan asking for an Alex & Co. reunion",
+        watchLabel: "Watch on TikTok",
+      },
+      team: {
+        label: "The Team",
+        heading: "Cast & Creators",
+        members: [
+          {
+            name: "Leonardo Cecchi",
+            role: "Writer · Producer · Mike",
+            bio: "Leonardo grew up between the US and Italy, and his own Italian grandmother passed away several years ago, and he knows firsthand both the place this film lives in and how a home can hold grief and love at once. He carried Disney's Alex & Co. for four seasons, a hit that aired across the UK, Ireland, the Middle East, and Europe.",
+          },
+          {
+            name: "Eleonora Gaggero",
+            role: "Co-Star, Sara · Attached",
+            bio: "Eleonora's own novel, Sul più bello, became the Netflix trilogy Out of My League, in which she also starred: author-to-screen proof, and the only person to contribute as both. She and Leonardo co-led Disney's Alex & Co. for four seasons.",
+          },
+        ],
+      },
+      creator: {
+        label: "From the Writer",
+        quote: "“Escape to Italy is a comedy because life keeps being funny even when it's falling apart. But underneath it is a simple, urgent idea: avoidance is the easiest way to move through life, and the most dangerous. The people we love, the moments that matter: they don't wait forever for us to be ready. This film is for anyone who has ever known exactly what they were avoiding and told themselves there was still time. I hope it's a reminder to stop waiting.”",
+        attribution: "Leonardo Cecchi, Writer · Creator · Producer",
+      },
+      cta: {
+        label: "Inquiries",
+        body: "Escape to Italy is currently in development: script complete, casting and financing underway. For producer, financing, or distribution inquiries:",
       },
     },
   },
@@ -206,7 +349,7 @@ export const t = {
       contact: "Contatti",
     },
     hero: {
-      subtitle: "Attore\u00a0\u00a0·\u00a0\u00a0Regista\u00a0\u00a0·\u00a0\u00a0Modello",
+      subtitle: "Attore  ·  Regista  ·  Modello",
       scroll: "Scorri",
     },
     studios: {
@@ -319,32 +462,58 @@ export const t = {
       italyLabel: "Italia",
       copyright: "Tutti i diritti riservati.",
     },
+    originalWork: {
+      label: "Progetti",
+      heading: "Progetti Originali",
+      intro: "Scrivo, produco e interpreto storie a cui tengo — attualmente in sviluppo attivo e in fase di pitch.",
+      backLabel: "Tutti i Progetti",
+      cards: [
+        {
+          title: "Escape to Italy",
+          tag: "Lungometraggio · In Sviluppo",
+          blurb: "Una commedia romantica su un banchiere italoamericano che ha una settimana per salvare la casa della nonna defunta, e trova la vita da cui stava scappando.",
+          cta: "Vedi il Progetto",
+          href: "/original-work/escape-to-italy",
+          image: "/images/escape-to-italy-card.jpg",
+          imagePosition: "center",
+        },
+        {
+          title: "Call It All Love",
+          tag: "Serie Limitata · In Sviluppo",
+          blurb: "Una serie drammatica limitata basata sul caso di George Huguely V, co-scritta e prodotta con il regista David Mazouz. Selezione Ufficiale, HollyShorts Film Festival.",
+          cta: "Vedi il Progetto",
+          href: "/original-work/call-it-all-love",
+          image: "/images/cial-poster.png",
+          imagePosition: "10% center",
+        },
+      ],
+    },
     callItAllLove: {
       hero: {
-        shortFilmLabel: "Cortometraggio \u2014 Prova del Concetto",
+        shortFilmLabel: "Cortometraggio — Prova del Concetto",
       },
-      logline: "Quando un atleta universitario privilegiato uccide la sua ex ragazza in un raptus di rabbia, il processo che ne segue rivela il sistema che lo ha costruito: suo padre, la sua classe sociale, una cultura che ha ignorato i segnali. Ci\u00f2 che rimane dopo il verdetto non \u00e8 giustizia. \u00c8 silenzio \u2014 e un giovane uomo che deve decidere se vale la pena vivere ci\u00f2 che resta della sua vita.",
+      logline: "Quando un atleta universitario privilegiato uccide la sua ex ragazza in un raptus di rabbia, il processo che ne segue rivela il sistema che lo ha costruito: suo padre, la sua classe sociale, una cultura che ha ignorato i segnali. Ciò che rimane dopo il verdetto non è giustizia. È silenzio — e un giovane uomo che deve decidere se vale la pena vivere ciò che resta della sua vita.",
       series: {
         label: "La Serie",
         heading: "La Serie",
-        body1: "Call It All Love \u00e8 una serie drama limitata di 6\u20138 episodi, raccontata su una linea temporale non lineare che va dal primo anno di George Huguely V all\u2019Universit\u00e0 della Virginia fino alla sua condanna nel 2012. Basata su documenti pubblici e testimonianze processuali, con libert\u00e0 creative.",
-        body2: "La serie non \u00e8 un procedurale. Non \u00e8 un giallo. Il pubblico sa dal primo fotogramma cosa ha fatto George e come va a finire. La domanda che la serie pone \u00e8 pi\u00f9 difficile: come si costruisce un uomo capace di questo?",
+        body1: "Call It All Love è una serie drama limitata di 6–8 episodi, raccontata su una linea temporale non lineare che va dal primo anno di George Huguely V all’Università della Virginia fino alla sua condanna nel 2012. Basata su documenti pubblici e testimonianze processuali, con libertà creative.",
+        body2: "La serie non è un procedurale. Non è un giallo. Il pubblico sa dal primo fotogramma cosa ha fatto George e come va a finire. La domanda che la serie pone è più difficile: come si costruisce un uomo capace di questo?",
       },
       whyThisStory: {
-        label: "Perch\u00e9 Questa Storia",
-        heading: "Perch\u00e9 Questa Storia. Perch\u00e9 Ora.",
+        label: "Perché Questa Storia",
+        heading: "Perché Questa Storia. Perché Ora.",
         cards: [
           {
             heading: "Il Momento Culturale",
-            body: "Siamo nel mezzo di una resa dei conti culturale su ci\u00f2 che abbiamo insegnato agli uomini a essere \u2014 su come li abbiamo cresciuti, chi abbiamo ritenuto responsabile e chi ha pagato il prezzo. La conversazione sulla violenza domestica e gli abusi nei rapporti intimi non \u00e8 mai stata cos\u00ec urgente, n\u00e9 cos\u00ec mainstream.",
+            body: "Siamo nel mezzo di una resa dei conti culturale su ciò che abbiamo insegnato agli uomini a essere — su come li abbiamo cresciuti, chi abbiamo ritenuto responsabile e chi ha pagato il prezzo. La conversazione sulla violenza domestica e gli abusi nei rapporti intimi non è mai stata così urgente, né così mainstream.",
           },
           {
             heading: "Il Vuoto che Nessuno Ha Colmato",
-            body: "Nessuna serie drama di prestigio ha mai messo al centro la formazione di un uomo violento \u2014 non solo la sua psicologia, ma l\u2019intero sistema sociale e familiare che lo ha prodotto, mantenendo al tempo stesso la vittima come essere umano completo. Call It All Love colma quel vuoto.",
+            body: "Nessuna serie drama di prestigio ha mai messo al centro la formazione di un uomo violento — non solo la sua psicologia, ma l’intero sistema sociale e familiare che lo ha prodotto, mantenendo al tempo stesso la vittima come essere umano completo. Call It All Love colma quel vuoto.",
           },
           {
             heading: "La Partnership",
-            body: "La morte di Yeardley Love nel 2010 ha ispirato la fondazione della One Love Foundation, che da quindici anni educa oltre 5 milioni di giovani sui segnali d\u2019allarme delle relazioni abusive. Questa serie \u00e8 un partner creativo naturale per quella missione \u2014 non come un documentario didattico, ma come drama di prestigio che d\u00e0 un volto umano ai dati che One Love ha trascorso anni a cercare di far sentire.",
+            body: "La morte di Yeardley Love nel 2010 ha ispirato la fondazione della One Love Foundation, che da quindici anni educa oltre 5 milioni di giovani sui segnali d’allarme delle relazioni abusive. Questa serie è un partner creativo naturale per quella missione — non come un documentario didattico, ma come drama di prestigio che dà un volto umano ai dati che One Love ha trascorso anni a cercare di far sentire.",
           },
         ],
       },
@@ -355,17 +524,17 @@ export const t = {
           {
             name: "George Huguely V",
             role: "Protagonista",
-            description: "Affascinante, magnetico nel modo in cui il denaro e la sicurezza producono. Il suo arco narrativo non \u00e8 di redenzione. \u00c8 di sopravvivenza.",
+            description: "Affascinante, magnetico nel modo in cui il denaro e la sicurezza producono. Il suo arco narrativo non è di redenzione. È di sopravvivenza.",
           },
           {
             name: "Yeardley Love",
             role: "Centro Morale",
-            description: "Calorosa, concreta, acutamente intelligente. La serie insiste sulla sua completezza. La sua assenza \u00e8 l\u2019argomento finale della serie.",
+            description: "Calorosa, concreta, acutamente intelligente. La serie insiste sulla sua completezza. La sua assenza è l’argomento finale della serie.",
           },
           {
             name: "George Huguely IV",
             role: "Il Padre",
-            description: "Levigato dalla ricchezza, fluente socialmente, emotivamente evacuato. Tratta la paternit\u00e0 come una membership istituzionale: uno status da mantenere, non una relazione da abitare.",
+            description: "Levigato dalla ricchezza, fluente socialmente, emotivamente evacuato. Tratta la paternità come una membership istituzionale: uno status da mantenere, non una relazione da abitare.",
           },
         ],
       },
@@ -376,17 +545,134 @@ export const t = {
       partnership: {
         label: "Partnership",
         heading: "One Love Foundation",
-        body: "Call It All Love viene sviluppata in partnership formale con la One Love Foundation. Questa non \u00e8 un\u2019iniziativa benefica. \u00c8 un allineamento creativo e commerciale: la serie d\u00e0 un volto ai dati di One Love, e One Love offre alla serie credibilit\u00e0 istituzionale e un pubblico gi\u00e0 formato.",
+        body: "Call It All Love viene sviluppata in partnership formale con la One Love Foundation. Questa non è un’iniziativa benefica. È un allineamento creativo e commerciale: la serie dà un volto ai dati di One Love, e One Love offre alla serie credibilità istituzionale e un pubblico già formato.",
       },
       creator: {
         label: "Dal Creatore",
-        quote: "\u201cNon ho fatto questo per spiegare George Huguely. L\u2019ho fatto perch\u00e9 credo che le storie pi\u00f9 pericolose siano quelle che pensiamo di capire gi\u00e0. Call It All Love \u00e8 la storia di cosa \u00e8 fatto un uomo quando tutto ci\u00f2 che lo ha formato viene strappato via. Non \u00e8 una storia confortante. Non finisce bene. Ma credo che sia necessaria \u2014 e credo che, se la raccontiamo bene, potrebbe cambiare il modo in cui un giovane riconosce l\u2019inizio di qualcosa di pericoloso prima che raggiunga la sua fine. Vale la pena farla. \u00c8 questo.\u201d",
-        attribution: "\u2014 Leonardo Cecchi, Scrittore \u00b7 Creatore \u00b7 Produttore",
+        quote: "“Non ho fatto questo per spiegare George Huguely. L’ho fatto perché credo che le storie più pericolose siano quelle che pensiamo di capire già. Call It All Love è la storia di cosa è fatto un uomo quando tutto ciò che lo ha formato viene strappato via. Non è una storia confortante. Non finisce bene. Ma credo che sia necessaria — e credo che, se la raccontiamo bene, potrebbe cambiare il modo in cui un giovane riconosce l’inizio di qualcosa di pericoloso prima che raggiunga la sua fine. Vale la pena farla. È questo.”",
+        attribution: "— Leonardo Cecchi, Scrittore · Creatore · Produttore",
       },
       cta: {
         label: "Richieste",
-        body: "Call It All Love \u00e8 attualmente in sviluppo attivo e in fase di pitch. Per richieste di produzione, distribuzione o partnership:",
+        body: "Call It All Love è attualmente in sviluppo attivo e in fase di pitch. Per richieste di produzione, distribuzione o partnership:",
         downloadLabel: "Scarica il Series Bible",
+      },
+    },
+    escapeToItaly: {
+      quickFacts: {
+        genreLabel: "Genere",
+        genre: "Commedia Romantica",
+        settingLabel: "Ambientazione",
+        setting: "Los Angeles e Piemonte, Italia",
+        toneLabel: "Tono",
+        tone: "Calda, divertente, silenziosamente struggente",
+      },
+      logline: "Mike, un banchiere italoamericano emotivamente chiuso, ha una settimana per salvare la casa della nonna appena scomparsa, ma tra una Nonna che tiene viva nella propria mente pur di non doverle dire addio, un vecchio amico che lo trascina nella vita notturna italiana, e un vecchio amore a cui è troppo guardingo per aprirsi, la scadenza gli sfugge. Perde la casa. Ciò che trova al suo posto è la vita, e il cuore, da cui è scappato per anni.",
+      story: {
+        label: "Panoramica",
+        heading: "La Storia",
+        body1: "Mike, un banchiere italoamericano a Los Angeles, devia ogni cosa reale con fascino e battute, finché, nella stessa settimana, gli viene negata una promozione, la sua ragazza lo lascia (“Spero che tu impari a sentire le cose prima che sia troppo tardi”), e sua madrina gli rivela che ha una settimana per salvare la casa della nonna defunta da un sequestro. Mike parte per l’Italia.",
+        body2: "Alla casa, trova la Nonna: calda, presente, esattamente come la ricorda. Non è reale, e Mike lo sa, ma non riesce a lasciarla andare. Si riavvicina a Riccardo, un altro che evita, nascondendo il proprio lutto, e ritrova un ritmo naturale con la sua amica di penna d’infanzia Sara, finché lei non lo spinge a esserci davvero per lei, non a schivare, e lui comincia a credere di poter essere diverso.",
+        closingLine: "“Il suo cuore non è mai stato troppo grande per questo mondo. Si era solo reso piccolo abbastanza per starci dentro.”",
+      },
+      whyThisStory: {
+        label: "Perché Questa Storia",
+        heading: "Perché Questa Storia. Perché Ora.",
+        cards: [
+          {
+            heading: "Un Vuoto di Genere da Colmare",
+            body: "Ogni commedia romantica ambientata in Italia vende la cartolina: un forestiero guarito dal paesaggio. Questa vende il prezzo di tutto ciò: cosa significa davvero avere un piede in ciascun mondo, raccontato da un italoamericano che lo ha vissuto.",
+          },
+          {
+            heading: "Una Vera Conversazione sulla Mascolinità",
+            body: "Come molti uomini, a Mike e Riccardo non è mai stato insegnato cosa fare con il dolore; questo film li guarda trovare un’altra via di fuga, e poi tornare indietro. Attuale, ma guadagnato attraverso la commedia e il cuore, non una lezione.",
+          },
+        ],
+      },
+      characters: {
+        label: "I Personaggi",
+        heading: "Personaggi",
+        items: [
+          {
+            name: "Mike (Michele) Giusti",
+            role: "Protagonista",
+            description: "Primi anni ’20. Un impiegato bancario italoamericano a Los Angeles che ha costruito tutta la sua personalità sul non sentire le cose. Di cuore grande, e sul punto di imparare a farlo vedere.",
+          },
+          {
+            name: "Sara Mancuso",
+            role: "Colei Che Lo Vede Davvero",
+            description: "Primi anni ’20. L’amica di penna d’infanzia di Mike, tornata in Piemonte da Milano per aiutare a gestire la banca di famiglia. Divisa in silenzio tra inseguire il proprio sogno e restare per un padre a cui il tempo sta per scadere.",
+          },
+          {
+            name: "Riccardo Costa",
+            role: "Lo Specchio Oscuro di Mike",
+            description: "Primi anni ’20. Il migliore amico d’infanzia di Mike, figura magnetica della vita notturna torinese, che gli insegna le sue “regole” per la sicurezza e per non pensarci troppo, mentre evita il proprio lutto esattamente come fa Mike.",
+          },
+          {
+            name: "Nonna Giusti",
+            role: "Colei Che Non Lo Ha Mai Lasciato Nascondere",
+            description: "Fine anni ’60 – ’70. La nonna di Mike, scomparsa sei mesi prima dell’inizio della storia. Mike interagisce con una versione per metà immaginata e per metà ricordata di lei, costruita per tenerla vicina: l’unica persona che gli ha sempre detto la verità.",
+          },
+        ],
+      },
+      comparables: {
+        label: "Tono e Posizionamento",
+        heading: "In Buona Compagnia",
+        items: [
+          {
+            title: "About Time",
+            info: "2013",
+            note: "La commedia nasce naturalmente da personaggi imperfetti e amabili, non dalle battute; le risate rendono i momenti emotivi ancora più forti.",
+          },
+          {
+            title: "Call Me By Your Name",
+            info: "Sony Pictures Classics, 2017",
+            note: "Una fotografia italiana assolata e un senso di desiderio in ogni inquadratura.",
+          },
+          {
+            title: "La Dolce Villa",
+            info: "Netflix, 2024",
+            note: "Un viaggio in Italia fatto controvoglia diventa il luogo dove qualcuno finalmente respira, si innamora e trova la vita che non sapeva di cercare.",
+          },
+        ],
+      },
+      socialTraction: {
+        label: "Vantaggio di Marketing",
+        heading: "Un Pubblico Già Pronto",
+        body1: "Leonardo porta a questo progetto un seguito social di oltre 800.000 persone tra TikTok e Instagram, costruito raccontando per anni la propria storia di italoamericano in bilico tra due mondi, lo stesso territorio raccontato in Escape to Italy.",
+        stats: [
+          { num: "4,08M", label: "Seguito Combinato", subtitle: "Leonardo ed Eleonora, Instagram + TikTok" },
+          { num: "2,2M", label: "TikTok di Eleonora", subtitle: "Da sola, costruito con Alex & Co. e Out of My League" },
+        ],
+        body2: "I fan chiedono già altro di questa storia. Una risposta a un commento che chiedeva una reunion di Alex & Co. ne è un piccolo esempio: la prova che questo pubblico non si limita a guardare, è coinvolto in ciò che Leonardo farà dopo.",
+        body3: "Questo seguito combinato porta un vero peso di marketing a Escape to Italy prima ancora di girare un solo fotogramma.",
+        videoCaption: "Risponde a un fan che chiede una reunion di Alex & Co.",
+        watchLabel: "Guarda su TikTok",
+      },
+      team: {
+        label: "Il Team",
+        heading: "Cast e Creatori",
+        members: [
+          {
+            name: "Leonardo Cecchi",
+            role: "Sceneggiatore · Produttore · Mike",
+            bio: "Leonardo è cresciuto tra Stati Uniti e Italia, e la sua nonna italiana è scomparsa alcuni anni fa, e conosce in prima persona sia il luogo in cui vive questo film, sia il modo in cui una casa può custodire insieme il dolore e l’amore. Ha sostenuto Alex & Co. per Disney per quattro stagioni, un successo trasmesso in UK, Irlanda, Medio Oriente ed Europa.",
+          },
+          {
+            name: "Eleonora Gaggero",
+            role: "Co-protagonista, Sara · Confermata",
+            bio: "Il romanzo di Eleonora, Sul più bello, è diventato la trilogia Netflix Out of My League, in cui ha anche recitato: una rara prova di autrice diventata interprete, e l’unica persona ad aver contribuito in entrambi i ruoli. Ha co-condotto Alex & Co. con Leonardo per quattro stagioni.",
+          },
+        ],
+      },
+      creator: {
+        label: "Dallo Sceneggiatore",
+        quote: "“Escape to Italy è una commedia perché la vita continua a essere divertente anche quando sta andando in pezzi. Ma sotto c’è un’idea semplice e urgente: evitare è il modo più facile per attraversare la vita, ed è anche il più pericoloso. Le persone che amiamo, i momenti che contano: non aspettano per sempre che siamo pronti. Questo film è per chiunque abbia mai saputo esattamente cosa stava evitando e si sia detto che c’era ancora tempo. Spero sia un promemoria per smettere di aspettare.”",
+        attribution: "Leonardo Cecchi, Sceneggiatore · Ideatore · Produttore",
+      },
+      cta: {
+        label: "Richieste",
+        body: "Escape to Italy è attualmente in sviluppo: sceneggiatura completata, casting e finanziamento in corso. Per richieste di produzione, finanziamento o distribuzione:",
       },
     },
   },

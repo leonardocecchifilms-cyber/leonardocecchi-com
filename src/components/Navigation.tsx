@@ -19,7 +19,7 @@ export default function Navigation() {
     { label: tr.resume,       href: "/#resume" },
     { label: tr.inquiries,    href: "/#inquiries" },
     { label: tr.contact,      href: "/#contact" },
-    { label: tr.selfProduced, href: "/original-work/call-it-all-love" },
+    { label: tr.selfProduced, href: "/original-work" },
   ];
 
   useEffect(() => {
